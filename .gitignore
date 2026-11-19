@@ -14,3 +14,8 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Visualizer
+web/node_modules/
+web/dist/
+web/.npm-cache/
