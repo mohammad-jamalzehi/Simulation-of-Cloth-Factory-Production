@@ -577,7 +577,8 @@ def finish_packing():
             prod_pa += current_time - start_pa
 
 
-while current_time < t_simulation_time:
+# Dispatch events through the horizon, including events scheduled exactly at it.
+while FEL and FEL[0][0] <= t_simulation_time:
     current_time, event_type = FEL.pop(0)
     if event_type == 'arrival_front':
         arrival_front()
